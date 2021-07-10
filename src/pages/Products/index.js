@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { Card, CardItem, Body, Button } from 'native-base';
@@ -137,3 +138,15 @@ import stylesScroll from './styles';
   }
 }
 
+=======
+import React from 'react';
+import {View, Text} from 'react-native';
+
+export default function index() {
+  return (
+    <View>
+      <Text>Products</Text>
+    </View>
+  );
+}
+>>>>>>> 92fa11c97adcb6ac5e1253cd163c7b9ff3e03bf8

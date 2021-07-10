@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Animated,
-  Image,
   Keyboard,
   KeyboardAvoidingView,
   Text,
@@ -17,12 +16,10 @@ export default function Login() {
   const [logo] = useState(new Animated.ValueXY({x: 150, y: 150}));
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
     keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
       keyboardDidShow,
     );
-    // eslint-disable-next-line no-undef
     keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       keyboardDidHide,
@@ -89,19 +86,24 @@ export default function Login() {
         <TextInput
           style={styles.input}
           placeholder="E-mail"
+          placeholderTextColor="#808080"
           autoCorrect={false}
           onChangeText={() => {}}
         />
+
         <TextInput
           style={styles.input}
           placeholder="Senha"
+          placeholderTextColor="#808080"
           autoCorrect={false}
           onChangeText={() => {}}
+          secureTextEntry={true}
         />
 
         <TouchableOpacity style={styles.buttonSubmit}>
           <Text style={styles.submitText}>Acessar</Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.buttonRegister}>
           <Text style={styles.registerText}>Cadastrar-se</Text>
         </TouchableOpacity>

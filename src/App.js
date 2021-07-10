@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
-import Login from './pages/Login/index';
+import MyDrawer from './Navigation/DrawerNavigation';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
   return (
-    <SafeAreaView>
-      <Login />
-    </SafeAreaView>
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
   );
 }
 
