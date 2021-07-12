@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import styles from './styles';
 
 export default function Login() {
@@ -66,13 +67,14 @@ export default function Login() {
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
-        <Animated.Image
-          style={{
-            x: logo.x,
-            y: logo.y,
-          }}
-          source={require('../../assets/logo.png')}
-        />
+        <Animated.Text>
+          <Fontisto
+            name="angelist"
+            color="#000"
+            size={60}
+            style={{justifyContent: 'center', alignItems: 'center'}}
+          />
+        </Animated.Text>
       </View>
 
       <Animated.View

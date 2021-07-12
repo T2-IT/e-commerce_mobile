@@ -1,10 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+} from 'react-native';
+import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
+import styles from './styles';
 
-export default function index() {
+function Home() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Home</Text>
     </View>
   );
 }
+
+export default Home;

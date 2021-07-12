@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Home from '../../pages/Home';
-import Products from '../../pages/Products';
+import MyStackHome from '../StackNavigation/Home/home';
+import MyStackProducts from '../StackNavigation/Products/products';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,14 +28,21 @@ const MyTabs = () => {
       }}>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={MyStackHome}
         options={{
           tabBarIcon: ({color}) => <Icon name="home" color={color} size={25} />,
+          title: () => {
+            return (
+              <View>
+                <Text>Home</Text>
+              </View>
+            );
+          },
         }}
       />
       <Tab.Screen
-        name="Products"
-        component={Products}
+        name="ProductsStack"
+        component={MyStackProducts}
         options={{
           tabBarIcon: ({color}) => (
             <Icon name="store-alt" color={color} size={20} />

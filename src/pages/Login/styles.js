@@ -5,12 +5,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#282a36',
+    backgroundColor: '#FFFFFF',
   },
 
   containerLogo: {
     flex: 1,
     justifyContent: 'center',
+    padding: 0,
+    marginVertical: 20,
   },
 
   container: {
@@ -22,17 +24,18 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    backgroundColor: '#f8f8f2',
+    backgroundColor: '#FFFFFF',
     width: '90%',
     marginBottom: 15,
     color: '#222',
     fontSize: 17,
-    borderRadius: 7,
+    borderBottomWidth: 1,
+    borderColor: 'black',
     padding: 10,
   },
 
   buttonSubmit: {
-    backgroundColor: '#8be9fd',
+    backgroundColor: '#000',
     width: '90%',
     height: 45,
     alignItems: 'center',
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
   },
 
   submitText: {
-    color: '#222',
+    color: '#FFFFFF',
     fontSize: 18,
   },
 
