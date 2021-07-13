@@ -1,10 +1,44 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {Text, View, TextInput, StyleSheet, Button} from 'react-native';
 
-export default function Checkout() {
+export default ({route, navegation}) => {
+  const [user, setUser] = useState(route.params ? route.params : {});
   return (
-    <View>
-      <Text>Checkout</Text>
+    <View style={style.form}>
+      <Text>Nome</Text>
+      <TextInput
+        style={style.input}
+        onChangeText={name => setUser({...user, name})}
+        placeholder="Informe o nome"
+        value={user.name}
+      />
+      <Text>Endereço</Text>
+      <TextInput
+        style={style.input}
+        onChangeText={endereco => setUser({...user, endereco})}
+        placeholder="Informe o endereço do cliente"
+        value={user.endereco}
+      />
+      <Text>Endereço entrega</Text>
+      <TextInput
+        style={style.input}
+        onChangeText={enderecoEntrega => setUser({...user, enderecoEntrega})}
+        placeholder="Informe o endereço de entrega"
+        value={user.enderecoEntrega}
+      />
     </View>
   );
-}
+};
+
+const style = StyleSheet.create({
+  form: {
+    padding: 12,
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBotton: 10,
+  },
+});
+
