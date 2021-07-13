@@ -1,12 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {
-  View,
-  SafeAreaView,
-
-  FlatList,
-  Text,
-  Image,
-} from 'react-native';
+import {View, SafeAreaView, FlatList, Text, Image} from 'react-native';
 import CartContext from '../../context/CartContext';
 import styles from './styles';
 
@@ -29,7 +22,9 @@ const Cart = () => {
             <View style={styles.rowcontainer}>
               <Text style={styles.text}> {item.item.nome}</Text>
               <Image source={{uri: item.item.url}} style={styles.image} />
-              <Text style={styles.text}>Valor: R$ {item.item.valorUnitario}</Text>
+              <Text style={styles.text}>
+                Valor: R$ {item.item.valorUnitario}
+              </Text>
             </View>
           );
         }}
@@ -41,6 +36,5 @@ const Cart = () => {
     </SafeAreaView>
   );
 };
-
 
 export default Cart;

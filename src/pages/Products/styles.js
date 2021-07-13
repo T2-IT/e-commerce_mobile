@@ -1,62 +1,69 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const stylesProduto = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f8f8f8',
-    alignItems: 'center'
+    margin: 10,
+    marginHorizontal: 20,
+    backgroundColor: '#FFF',
+    borderRadius: 15,
   },
-  containerAct: {
-    flex: 1,
+  imageContainer: {
+    borderTopEndRadius: 15,
+    borderTopStartRadius: 15,
     justifyContent: 'center',
-    textAlign: 'center',
-    paddingTop: 30,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: '#FFF',
+    shadowColor: '#7F5DF0',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
   },
-  text: {
-    fontSize: 20,
-    color: '#101010',
-    marginTop: 60,
-    fontWeight: '700'
-  },
-  listItem: {
-    marginTop: 10,
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    backgroundColor: '#fff',
-    flexDirection: 'row'
-  },
-  productImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 8
-  },
-  productInfo: {
-    marginLeft: 10,
-    flex: 1,
-  },
-  title: {
-    fontSize: 18,
+  image: {
     width: 200,
-    padding: 10
+    height: 200,
+    borderRadius: 8,
+    marginVertical: 20,
   },
-  btn: {
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginHorizontal: 15,
+    marginVertical: 15,
+  },
+  descriptionText: {
+    marginHorizontal: 15,
+    marginBottom: 15,
+  },
+  priceContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  price: {
+    fontSize: 20,
+    marginHorizontal: 15,
+  },
+  buttonContainer: {
+    flexDirection: 'column',
+    marginHorizontal: 10,
+    marginVertical: 20,
+  },
+  button: {
+    backgroundColor: '#000',
+    width: 170,
+    height: 50,
+    borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: '#ffcc00',
   },
-  btnAddCart: {
-    backgroundColor: '#fff',
+  buttonText: {
+    color: '#FFF',
   },
-  txtBtn: {
-    color: '#000',
-  }
 });
 
 export default stylesProduto;

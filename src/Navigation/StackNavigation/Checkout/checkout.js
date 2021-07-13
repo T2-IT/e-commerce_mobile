@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../../../pages/Home';
+import Checkout from '../../../pages/Checkout';
 import Header from '../../../Components/Header';
 import {color} from 'react-native-elements/dist/helpers';
 
@@ -10,8 +10,8 @@ function MyStackFinishPage() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="HomeStack"
-        component={FinishPage}
+        name="CheckoutStack"
+        component={Checkout}
         options={({navigation}) => {
           return {
             headerTitle: () => <Header navigation={navigation} />,

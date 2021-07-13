@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View} from 'react-native';
 import {Title, Drawer, Text} from 'react-native-paper';
+import {Badge, withBadge} from 'react-native-elements';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import CarrinhoContext from '../../context/CartContext';
 
 function DrawerContent(props) {
+  const context = useContext(CarrinhoContext);
+  const BadgedIcon = withBadge(context.produtos.length)(AntDesign);
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
@@ -49,7 +53,7 @@ function DrawerContent(props) {
             />
             <DrawerItem
               icon={({color, size}) => (
-                <AntDesign name="shoppingcart" color={color} size={size} />
+                <BadgedIcon name="shoppingcart" color={color} size={size} />
               )}
               label="Cart"
               onPress={() => {

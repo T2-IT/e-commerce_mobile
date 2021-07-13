@@ -1,14 +1,23 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  text: {
-    color: '#000',
-    fontSize: 25,
-  },
-  container: {
+  separator: {
     flex: 1,
-    backgroundColor: '#FFF',
-    padding: 20,
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  button_Login: {
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  button_produtos: {
+    marginVertical: 85,
+    alignItems: 'center',
+    borderRadius: 90,
+    borderWidth: 1,
+    width: 100,
   },
 });
+
 export default styles;
