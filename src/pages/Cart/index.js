@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {View, SafeAreaView, FlatList, Text, Image} from 'react-native';
+import {View, SafeAreaView, FlatList, Text, Image,TouchableOpacity } from 'react-native';
 import CartContext from '../../context/CartContext';
 import styles from './styles';
 
@@ -30,9 +30,12 @@ const Cart = () => {
         }}
       />
       <View>
-        <Text style={styles.title}>Total: </Text>
+        <Text style={styles.subTotal}>SUBTOTAL: </Text>
         <Text style={styles.total}>R$ {valorTotal}</Text>
       </View>
+      <TouchableOpacity style={styles.buttonFinalizar}>
+          <Text style={styles.finalizarText}>Finalizar Pedido</Text>
+        </TouchableOpacity>
     </SafeAreaView>
   );
 };

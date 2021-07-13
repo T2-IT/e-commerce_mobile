@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#363636',
+      backgroundColor: '#ffffff',
     },
     rowcontainer: {
       flex: 1,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     text: {
       padding: 10,
       fontSize: 20,
-      color: '#525252',
+      color: '#1a1a1a',
     },
     delete: {
       alignSelf: 'flex-end',
@@ -36,9 +36,38 @@ const styles = StyleSheet.create({
     total:{
       marginTop: 20,
       marginLeft: 20,
+      width:'30%',
       fontSize: 30,
-      backgroundColor:	'#484848',
+      borderRadius:8,
+      color:'#000000'
+      
+
     
+    },
+    buttonFinalizar: {
+      backgroundColor: '#000',
+      width: '90%',
+      height: 45,
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 20,
+      marginLeft: 20,
+      borderRadius:7,
+    },
+  
+    finalizarText: {
+      color: '#FFFFFF',
+      fontSize: 18,
+      
+
+    },
+    subTotal:{
+      marginTop: 20,
+      marginLeft: 20,
+      fontSize: 30,
+     color:'#999999',
+    
+     
     }
   });
 
