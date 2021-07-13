@@ -1,21 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginHorizontal: 10,
-    backgroundColor: '#FFF',
-  },
-  containerButtonRadios: {
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    marginHorizontal: 10,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
-    backgroundColor: '#FFF',
-  },
   input: {
     backgroundColor: '#FFFFFF',
     width: '90%',
@@ -26,13 +11,21 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     padding: 10,
   },
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+    backgroundColor: '#FFF',
+  },
   button: {
     backgroundColor: '#000',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     height: 40,
-    width: 140,
+    width: 120,
     marginVertical: 20,
   },
   buttonText: {

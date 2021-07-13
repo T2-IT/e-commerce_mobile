@@ -31,12 +31,10 @@ const ListagemProdutos = () => {
     axios
       .get('https://residencia-ecommerce.herokuapp.com/produto')
       .then(response => {
-        //console.log(response.data);
         setProdutos(response.data);
         setIsLoading(false);
       })
       .catch(function (error) {
-        console.log(error);
         setIsLoading(false);
       });
   };

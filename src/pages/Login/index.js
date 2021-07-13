@@ -11,7 +11,7 @@ import {
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import styles from './styles';
 
-export default function Login() {
+export default function Login({navigation}) {
   const [offset] = useState(new Animated.ValueXY({x: 0, y: 80}));
   const [opacity] = useState(new Animated.Value(0));
   const [logo] = useState(new Animated.ValueXY({x: 150, y: 150}));
@@ -102,12 +102,16 @@ export default function Login() {
           secureTextEntry={true}
         />
 
-        <TouchableOpacity style={styles.buttonSubmit}>
+        <TouchableOpacity
+          style={styles.buttonSubmit}
+          onPress={() => navigation.navigate('HomeStack')}>
           <Text style={styles.submitText}>Acessar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister}>
-          <Text style={styles.registerText}>Cadastrar-se</Text>
+        <TouchableOpacity
+          style={styles.buttonRegister}
+          onPress={() => navigation.navigate('SingUp')}>
+          <Text style={styles.registerText}>Toque para se Cadastrar</Text>
         </TouchableOpacity>
       </Animated.View>
     </KeyboardAvoidingView>

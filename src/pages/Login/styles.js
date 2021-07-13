@@ -49,11 +49,15 @@ const styles = StyleSheet.create({
   },
 
   buttonRegister: {
-    marginTop: 15,
+    color: '#999999',
   },
 
   registerText: {
-    color: '#f8f8f2',
+    marginTop: 20,
+    fontSize: 15,
+    color: '#999999',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

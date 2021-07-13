@@ -9,7 +9,7 @@ function MyStackCart() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Cart"
+        name="CartStack"
         component={Cart}
         options={({navigation}) => {
           return {

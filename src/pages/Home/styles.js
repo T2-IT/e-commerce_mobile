@@ -1,22 +1,37 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  separator: {
+  button: {
+    backgroundColor: '#000',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    width: 120,
+    marginVertical: 20,
+  },
+  buttonText: {
+    color: '#fff',
+  },
+  container: {
     flex: 1,
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  button_Login: {
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 10,
+    marginHorizontal: 10,
+    backgroundColor: '#FFF',
   },
-  button_produtos: {
-    marginVertical: 85,
-    alignItems: 'center',
-    borderRadius: 90,
-    borderWidth: 1,
-    width: 100,
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginHorizontal: 15,
+    marginVertical: 15,
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: 8,
+    marginVertical: 20,
   },
 });
 

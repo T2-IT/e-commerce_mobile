@@ -9,7 +9,7 @@ function MyStackCheckOut() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Checkout"
+        name="CheckoutStack"
         component={Checkout}
         options={({navigation}) => {
           return {

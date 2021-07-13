@@ -12,7 +12,6 @@ import styles from './styles';
 
 const Cart = ({navigation}) => {
   const context = useContext(CartContext);
-  console.log(context.produtos);
 
   const valorTotal = context.produtos
     .reduce((total, prod) => total + prod.item.valorUnitario, 0)

@@ -1,46 +1,52 @@
 import React from 'react';
-import {View, SafeAreaView, Text, TouchableOpacity, Alert} from 'react-native';
+import {View, ScrollView, Image, Text, TouchableOpacity} from 'react-native';
 import styles from './styles';
 
-const Texto = () => (
-  <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 60}}>
-    <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-    <View>
-      <Text style={{width: 40, textAlign: 'center'}}>OU</Text>
-    </View>
-    <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-  </View>
-);
-
-const Home = ({navigation}) => (
-  <SafeAreaView>
-    <View style={styles.button_Login}>
-      <TouchableOpacity
-        color="#000"
-        onPress={() => Alert.alert('Pagina de login')}>
-        <Text>Login</Text>
-      </TouchableOpacity>
-    </View>
-    <View style={styles.button_Login}>
-      <TouchableOpacity
-        title="Cadastro"
-        color="#000"
-        onPress={() => Alert.alert('Página de Cadastro')}
-      />
-    </View>
-    <View>
-      <Texto />
-    </View>
-    <View style>
-      <TouchableOpacity
-        title="Produtos"
-        color="#000"
-        onPress={() => navigation.navigate('Products')}
-        style={styles.button_produtos}>
-        <Text>Produtos</Text>
-      </TouchableOpacity>
-    </View>
-  </SafeAreaView>
-);
+const Home = ({navigation}) => {
+  return (
+    <ScrollView style={{backgroundColor: '#fff'}}>
+      <View>
+        <Image
+          style={{width: 500, height: 300}}
+          source={{
+            uri: 'https://img.wallpapersafari.com/desktop/1440/900/38/68/SEyFka.jpg',
+          }}
+        />
+      </View>
+      <View style={{marginVertical: 20, marginLeft: 50, marginRight: 40}}>
+        <Text style={{fontSize: 20, marginVertical: 5, alignItems: 'center'}}>
+          Aplicativo focado na venda de itens esportivos e totalmente limitados.
+        </Text>
+        <Text style={{fontSize: 20, marginVertical: 5, alignItems: 'center'}}>
+          Loja para quem muda o jogo, quem só faz parte e para quem ainda dará
+          seus primeiros toques em uma bola. É a comunidade que está melhorando
+          e levando o esporte para o futuro.
+        </Text>
+      </View>
+      <View
+        style={{
+          margin: 10,
+          marginHorizontal: 20,
+          backgroundColor: '#FFF',
+          borderRadius: 15,
+          alignItems: 'center',
+          marginBottom: 50,
+        }}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#000',
+            width: 170,
+            height: 50,
+            borderRadius: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          onPress={() => navigation.navigate('Products')}>
+          <Text style={styles.buttonText}>Ver produtos</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
+  );
+};
 
 export default Home;

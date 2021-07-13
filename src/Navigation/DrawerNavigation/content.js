@@ -48,7 +48,7 @@ function DrawerContent(props) {
               )}
               label="Store"
               onPress={() => {
-                props.navigation.navigate('ProductsStack');
+                props.navigation.navigate('Products');
               }}
             />
             <DrawerItem

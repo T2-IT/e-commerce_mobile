@@ -1,16 +1,16 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Login from '../../../pages/Login';
+import SignUp from '../../../pages/SignUp';
 import Header from '../../../Components/Header';
 
 const Stack = createStackNavigator();
 
-function MyStackLogin() {
+function MyStackSignUp() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="LoginStack"
-        component={Login}
+        name="SignUp"
+        component={SignUp}
         options={({navigation}) => {
           return {
             headerTitle: () => <Header navigation={navigation} />,
@@ -26,4 +26,4 @@ function MyStackLogin() {
   );
 }
 
-export default MyStackLogin;
+export default MyStackSignUp;
