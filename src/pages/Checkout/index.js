@@ -7,8 +7,12 @@ import {
   StyleSheet,
   Button,
 } from 'react-native';
+import {RadioButton} from 'react-native-paper';
+import style from './styles';
 
-function Checkout() {
+export default function Checkout() {
+  const [user, setUser] = useState(route.params ? route.params : {});
+  const [value, setValue] = React.useState('boleto');
   return (
     <SafeAreaView style={styles.container}>
       <View style={style.form}>
@@ -33,9 +37,19 @@ function Checkout() {
           placeholder="Informe o endereço de entrega"
           value={user.enderecoEntrega}
         />
+        <RadioButton.Group
+          onValueChange={newValue => setValue(newValue)}
+          value={value}>
+          <View>
+            <Text>Pagamento boleto</Text>
+            <RadioButton value="boleto" />
+            <Text>Pagamento Cartão de crédito</Text>
+            <RadioButton value="credito" />
+            <Text>Pagamento Pix</Text>
+            <RadioButton value="pix" />
+          </View>
+        </RadioButton.Group>
       </View>
     </SafeAreaView>
   );
 }
-
-export default Checkout;
