@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Text, View, TextInput, StyleSheet, Button} from 'react-native';
+import {Text, View, SafeAreaView, TextInput, StyleSheet, Button} from 'react-native';
 
 export default ({route, navegation}) => {
   const [user, setUser] = useState(route.params ? route.params : {});
   return (
+    <SafeAreaView style={styles.container}>
     <View style={style.form}>
       <Text>Nome</Text>
       <TextInput
@@ -27,18 +28,8 @@ export default ({route, navegation}) => {
         value={user.enderecoEntrega}
       />
     </View>
+    </SafeAreaView>
   );
 };
 
-const style = StyleSheet.create({
-  form: {
-    padding: 12,
-  },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBotton: 10,
-  },
-});
 
