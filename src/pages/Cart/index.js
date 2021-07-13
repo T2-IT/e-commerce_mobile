@@ -1,9 +1,16 @@
 import React, {useContext, useState} from 'react';
-import {View, SafeAreaView, FlatList, Text, Image,TouchableOpacity } from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  FlatList,
+  Text,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import CartContext from '../../context/CartContext';
 import styles from './styles';
 
-const Cart = () => {
+const Cart = ({navigation}) => {
   const context = useContext(CartContext);
   console.log(context.produtos);
 
@@ -20,11 +27,11 @@ const Cart = () => {
         renderItem={({item, index}) => {
           return (
             <View style={styles.rowcontainer}>
-              <Text style={styles.text}> {item.item.nome}</Text>
-              <Image source={{uri: item.item.url}} style={styles.image} />
-              <Text style={styles.text}>
-                Valor: R$ {item.item.valorUnitario}
-              </Text>
+              <View style={styles.imageContainer}>
+                <Image source={{uri: item.item.url}} style={styles.image} />
+              </View>
+              <Text style={styles.title}>{item.item.nome}</Text>
+              <Text style={styles.text}>R$ {item.item.valorUnitario}</Text>
             </View>
           );
         }}
@@ -34,8 +41,12 @@ const Cart = () => {
         <Text style={styles.total}>R$ {valorTotal}</Text>
       </View>
       <TouchableOpacity style={styles.buttonFinalizar}>
-          <Text style={styles.finalizarText}>Finalizar Pedido</Text>
-        </TouchableOpacity>
+        <Text
+          style={styles.finalizarText}
+          onPress={() => navigation.navigate('Checkout')}>
+          Finalizar Pedido
+        </Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

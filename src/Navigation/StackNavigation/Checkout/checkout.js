@@ -2,15 +2,14 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Checkout from '../../../pages/Checkout';
 import Header from '../../../Components/Header';
-import {color} from 'react-native-elements/dist/helpers';
 
 const Stack = createStackNavigator();
 
-function MyStackFinishPage() {
+function MyStackCheckOut() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="CheckoutStack"
+        name="Checkout"
         component={Checkout}
         options={({navigation}) => {
           return {
@@ -27,4 +26,4 @@ function MyStackFinishPage() {
   );
 }
 
-export default MyStackFinishPage;
+export default MyStackCheckOut;
