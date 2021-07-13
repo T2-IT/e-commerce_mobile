@@ -13,14 +13,14 @@ import { useNavigation } from '@react-navigation/native';
 import { Icon } from 'react-native-elements';
 
 import stylesProduto from './styles';
-import CarrinhoContext from '../../../context/CarrinhoContext';
+import CartContext from '../../context/CartContext';
 
 const ListagemProdutos = () => {
   const navigation = useNavigation();
   const [produtos, setProdutos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { addProduto } = useContext(CarrinhoContext);
+  const { addProduto } = useContext(CartContext);
 
   useEffect(() => {
     getProdutos();
