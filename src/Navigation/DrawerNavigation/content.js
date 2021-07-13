@@ -52,8 +52,8 @@ function DrawerContent(props) {
               }}
             />
             <DrawerItem
-              icon={({color, size}) => (
-                <BadgedIcon name="shoppingcart" color={color} size={size} />
+              icon={({color}) => (
+                <BadgedIcon name="shoppingcart" color={color} size={25} />
               )}
               label="Cart"
               onPress={() => {

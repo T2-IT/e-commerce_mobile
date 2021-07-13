@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   drawerSection: {
-    marginTop: 15,
+    marginTop: 40,
   },
   bottomDrawerSection: {
     marginBottom: 15,

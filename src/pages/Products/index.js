@@ -12,9 +12,11 @@ import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
 import stylesProduto from './styles';
 import CartContext from '../../context/CartContext';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const ListagemProdutos = () => {
   const navigation = useNavigation();
+  const [favorite, setFavorite] = useState(false);
   const [produtos, setProdutos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
